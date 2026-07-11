@@ -6,9 +6,13 @@ An AI-powered Smart Home Automation System that combines Voice Control, Web Dash
 📌 Overview
 This project demonstrates an intelligent home automation system that enables users to control electrical appliances through:
 🎤 Voice Commands
+
 🌐 Web Dashboard
+
 🤖 AI Assistant (Offline)
+
 📟 LCD Display
+
 ⚡ ESP32 & Arduino Communication
 
 Unlike traditional home automation systems, this project integrates an offline Large Language Model (LLM) using Ollama (Llama 3.2:3B) to provide conversational AI capabilities while also controlling home appliances.

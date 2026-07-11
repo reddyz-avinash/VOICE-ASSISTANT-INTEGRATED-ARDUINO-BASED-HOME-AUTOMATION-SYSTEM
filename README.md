@@ -298,6 +298,9 @@ LCD Update
 ↓
 
 Website Update
+
+<img width="1536" height="1024" alt="ChatGPT Image Jul 11, 2026, 11_20_28 PM" src="https://github.com/user-attachments/assets/d7b5ed2c-9d4c-4b6a-b549-81c37eee3a65" />
+
 📈 Future Enhancements
 Motion Detection
 Fingerprint Authentication

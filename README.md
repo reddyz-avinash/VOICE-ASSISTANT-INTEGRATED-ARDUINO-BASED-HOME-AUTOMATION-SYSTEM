@@ -76,36 +76,66 @@ Automatically updates whenever device status changes.
 
 🏗 System Architecture
                    User
+                   
                      │
+                     
      ┌───────────────┼────────────────┐
+     
      │               │                │
+     
      ▼               ▼                ▼
+
 Voice Assistant   Web Dashboard    AI Chat
+
      │               │                │
+     
      └───────────────┼────────────────┘
+     
                      ▼
+              
               Python Application
+              
                      │
+    
      ┌───────────────┼───────────────┐
+  
      │               │               │
+     
      ▼               ▼               ▼
+
 Speech         Flask Server      Ollama AI
 Recognition                      (Llama3.2)
+
                      │
+                     
                      ▼
+               
                Serial Communication
+               
                      │
+                     
                      ▼
+                 
                  ESP32 DevKit
+                 
                      │
+                     
                      ▼
+                
                 Arduino UNO
+             
              ┌────────┴────────┐
+             
              ▼                 ▼
+        
         Relay Module      LCD Display
+        
              │
+            
              ▼
+       
        Bulb & Fan
+
 🛠 Hardware Components
 Arduino UNO R3
 ESP32 DevKit V1

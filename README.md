@@ -66,7 +66,7 @@ Fan : OFF
 Automatically updates whenever device status changes.
 
 🏗 System Architecture
-                   User
+                     User
                      │
      ┌───────────────┼────────────────┐
      │               │                │

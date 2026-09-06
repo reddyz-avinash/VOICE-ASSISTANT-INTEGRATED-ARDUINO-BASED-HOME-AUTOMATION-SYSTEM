@@ -3,7 +3,9 @@
 
 An AI-powered Smart Home Automation System that combines Voice Control, Web Dashboard, Offline AI Assistant, and IoT-based device control using Arduino UNO, ESP32, and Ollama (Llama 3.2:3B).
 
-📌 Overview
+---
+
+### 📌 Overview
 
 This project demonstrates an intelligent home automation system that enables users to control electrical appliances through:
 
@@ -19,424 +21,298 @@ This project demonstrates an intelligent home automation system that enables use
 
 Unlike traditional home automation systems, this project integrates an offline Large Language Model (LLM) using Ollama (Llama 3.2:3B) to provide conversational AI capabilities while also controlling home appliances.
 
+---
 
-✨ Features
+### ✨ Features
 
 🏠 Home Automation
 
-Turn Bulb ON/OFF
+- Turn Bulb ON/OFF
+- Turn Fan ON/OFF
+- Real-time Device Status
+- LCD Status Display
+- ESP32 Wi-Fi Communication
+- Arduino Relay Control
 
-Turn Fan ON/OFF
+---
 
-Real-time Device Status
+### 🎤 Voice Assistant
 
-LCD Status Display
-
-ESP32 Wi-Fi Communication
-
-Arduino Relay Control
-
-
-🎤 Voice Assistant
-
-Wake Word Support ("Assistant")
-
-Voice Recognition
-
-Text-to-Speech Responses
-
-Natural Voice Interaction
-
-Local Processing
+- Wake Word Support ("Assistant")
+- Voice Recognition
+- Text-to-Speech Responses
+- Natural Voice Interaction
+- Local Processing
 
 
 Example:
 
-Assistant
+- Assistant
+- Turn on bulb
+- Turning on bulb.
 
-Turn on bulb
+---
 
-Turning on bulb.
-
-
-🤖 AI Assistant
+## 🤖 AI Assistant
 
 Powered by
 
-Ollama
+- Ollama
 
-Llama 3.2:3B
+- Llama 3.2:3B
 
 
-Capabilities:
+### Capabilities:
 
-General Question Answering
-
-Date & Time
-
-Mathematical Calculations
-
-General Knowledge
-
-Offline AI Processing
+- General Question Answering
+- Date & Time
+- Mathematical Calculations
+- General Knowledge
+- Offline AI Processing
 
 
 Example:
 
-Assistant
+- Assistant
+- What is Artificial Intelligence?
 
-What is Artificial Intelligence?
+---
 
+### 🌐 Web Dashboard
 
-🌐 Web Dashboard
+- Device Control
+- Live Device Status
+- AI Chat
+- ESP32 Connection Status
+- Command History
+- Responsive Design
 
-Device Control
+---
 
-Live Device Status
-
-AI Chat
-
-ESP32 Connection Status
-
-Command History
-
-Responsive Design
-
-
-📟 LCD Display
+### 📟 LCD Display
 
 Displays
 
-Bulb : ON
-
-Fan : OFF
+- Bulb : ON
+- Fan : OFF
 
 Automatically updates whenever device status changes.
 
+---
 
-🏗 System Architecture
+### 🏗 System Architecture
 
-                   User
-                   
-                     │
-                     
-     ┌───────────────┼────────────────┐
-     
-     │               │                │
-     
+```text
+                   User                   
+                     │                     
+     ┌───────────────┼────────────────┐     
+     │               │                │     
      ▼               ▼                ▼
-
 Voice Assistant   Web Dashboard    AI Chat
-
-     │               │                │
-     
-     └───────────────┼────────────────┘
-     
-                     ▼
-              
-              Python Application
-              
-                     │
-    
-     ┌───────────────┼───────────────┐
-  
-     │               │               │
-     
+     │               │                │     
+     └───────────────┼────────────────┘    
+                     ▼              
+              Python Application              
+                     │    
+     ┌───────────────┼───────────────┐  
+     │               │               │     
      ▼               ▼               ▼
-
 Speech         Flask Server      Ollama AI
 Recognition                      (Llama3.2)
-
-                     │
-                     
-                     ▼
-               
-               Serial Communication
-               
-                     │
-                     
-                     ▼
-                 
-                 ESP32 DevKit
-                 
-                     │
-                     
-                     ▼
-                
-                Arduino UNO
-             
-             ┌────────┴────────┐
-             
-             ▼                 ▼
-        
-        Relay Module      LCD Display
-        
-             │
-            
-             ▼
-       
+                     │                     
+                     ▼               
+               Serial Communication               
+                     │                     
+                     ▼                 
+                 ESP32 DevKit                 
+                     │                     
+                     ▼                
+                Arduino UNO             
+             ┌────────┴────────┐             
+             ▼                 ▼        
+        Relay Module      LCD Display        
+             │            
+             ▼       
        Bulb & Fan
 
+```
+---
 
-🛠 Hardware Components
+### 🛠 Hardware Components
 
-Arduino UNO R3
+- Arduino UNO R3
+- ESP32 DevKit V1
+- 2-Channel Relay Module
+- 16×2 LCD Display (I2C)
+- Breadboard
+- Jumper Wires
+- USB Cables
+- LED Bulb / Lamp
+- DC Fan
 
-ESP32 DevKit V1
+ ---
 
-2-Channel Relay Module
+### 💻 Software Requirements
 
-16×2 LCD Display (I2C)
+- Python 3.11+
+- Arduino IDE
+- Visual Studio Code
+- Ollama
+- Llama 3.2:3B Model
 
-Breadboard
+---
 
-Jumper Wires
+### 📚 Python Libraries
 
-USB Cables
+#### Install dependencies using:
 
-LED Bulb / Lamp
+- pip install flask
+- pip install pyserial
+- pip install SpeechRecognition
+- pip install pyaudio
+- pip install requests
+- pip install pygame
+- pip install edge-tts
 
-DC Fan
+---
 
+### 🤖 Install Ollama
 
-💻 Software Requirements
+- Download Ollama
+- https://ollama.com
+- Install Llama 3.2
+- ollama pull llama3.2:3b
+- Run the model
+- ollama run llama3.2:3b
 
-Python 3.11+
+---
 
-Arduino IDE
+### 📂 Project Structure
 
-Visual Studio Code
-
-Ollama
-
-Llama 3.2:3B Model
-
-
-📚 Python Libraries
-
-Install dependencies using:
-
-pip install flask
-
-pip install pyserial
-
-pip install SpeechRecognition
-
-pip install pyaudio
-
-pip install requests
-
-pip install pygame
-
-pip install edge-tts
-
-
-🤖 Install Ollama
-
-Download Ollama
-
-https://ollama.com
-
-Install Llama 3.2
-
-ollama pull llama3.2:3b
-
-Run the model
-
-ollama run llama3.2:3b
-
-
-📂 Project Structure
-
+```text
 HomeAutomation/
-
 │
-
 ├── app.py
-
 ├── config.py
-
 ├── templates/
-
 │      index.html
-
 │
-
 ├── static/
-
 │      style.css
-
 │      script.js
-
 │
-
 ├── Arduino/
-
 │      Arduino.ino
-
-│
-
 ├── ESP32/
-
 │      ESP32.ino
-
 │
-
 └── README.md
 
+```
+---
 
-🚀 How to Run
+### 🚀 How to Run
 
-Step 1
+#### Step 1
+- Upload Arduino code.
 
-Upload Arduino code.
+#### Step 2
+- Upload ESP32 code.
 
-Step 2
+#### Step 3
+- Run Ollama
+- ollama run llama3.2:3b
 
-Upload ESP32 code.
+#### Step 4
+- Start Python
+- python app.py
 
-Step 3
+#### Step 5
+- Open Browser
+- http://127.0.0.1:5000
 
-Run Ollama
+---
 
-ollama run llama3.2:3b
+### 🎤 Voice Commands
 
-Step 4
+- Assistant
+- Turn on bulb
+- Turn off bulb
+- Turn on fan
+- Turn off fan
+- What is AI?
+- What is the time?
+- What is today's date?
+- 300 × 400
+- Go to sleep
 
-Start Python
+---
 
-python app.py
+### 🌐 Website Features
+- Bulb Control
+- Fan Control
+- AI Chat
+- Live Status
+- Command History
+- ESP32 Status
+- Date & Time
 
-Step 5
+---
 
-Open Browser
-
-http://127.0.0.1:5000
-
-
-🎤 Voice Commands
-
-Assistant
-
-Turn on bulb
-
-Turn off bulb
-
-Turn on fan
-
-Turn off fan
-
-What is AI?
-
-What is the time?
-
-What is today's date?
-
-300 × 400
-
-Go to sleep
-
-
-🌐 Website Features
-
-Bulb Control
-
-Fan Control
-
-AI Chat
-
-Live Status
-
-Command History
-
-ESP32 Status
-
-Date & Time
-
-
-🔄 Project Workflow
-
+### 🔄 Project Workflow
+```text
 Voice Command
-
 ↓
-
 Speech Recognition
-
 ↓
-
 Python Application
-
 ↓
-
 ESP32
-
 ↓
-
 Arduino UNO
-
 ↓
-
 Relay Module
-
 ↓
-
 Bulb/Fan
-
 ↓
-
 LCD Update
-
 ↓
-
 Website Update
+```
+---
 
+### Architecture
 <img width="1536" height="1024" alt="ChatGPT Image Jul 11, 2026, 11_20_28 PM" src="https://github.com/user-attachments/assets/d7b5ed2c-9d4c-4b6a-b549-81c37eee3a65" />
+---
 
+### 📈 Future Enhancements
 
-📈 Future Enhancements
+- Motion Detection
+- Fingerprint Authentication
+- Face Recognition
+- Smart Energy Monitoring
+- Weather Integration
+- Mobile Application
+- Additional Smart Devices
+- MQTT Support
 
-Motion Detection
+---
 
-Fingerprint Authentication
+### 🎯 Key Highlights
 
-Face Recognition
+- Offline AI using Ollama
+- Voice-controlled Home Automation
+- Web-based Device Management
+- Real-time Status Synchronization
+- ESP32 + Arduino Integration
+- LCD Status Monitoring
+- Local AI Processing
+- Modular Architecture
+- Scalable Design
 
-Smart Energy Monitoring
+---
 
-Weather Integration
+### 👨‍💻 Author
 
-Mobile Application
-
-Additional Smart Devices
-
-MQTT Support
-
-
-🎯 Key Highlights
-
-Offline AI using Ollama
-
-Voice-controlled Home Automation
-
-Web-based Device Management
-
-Real-time Status Synchronization
-
-ESP32 + Arduino Integration
-
-LCD Status Monitoring
-
-Local AI Processing
-
-Modular Architecture
-
-Scalable Design
-
-
-👨‍💻 Author
-
-Avinash Reddy
-
-B.Tech – Artificial Intelligence & Machine Learning
-
-Amity University Bengaluru
+- Avinashreddy
+- B.Tech – Artificial Intelligence & Machine Learning
